@@ -1,0 +1,11 @@
+{
+  "contract_version": "ADVISORY_FUSE_V2",
+  "contract_address": "0xA85b5871CeDb87cAe063d54A455DC6c9873D0b73",
+  "genvm_lint": "passed",
+  "genvm_validation": "passed",
+  "public_methods": { "total": 10, "view": 5, "write": 5 },
+  "contract_tests": { "passed": 14, "failed": 0 },
+  "frontend_tests": { "passed": 4, "failed": 0 },
+  "production_build": "passed",
+  "ui_reconciliation": "passed"
+}

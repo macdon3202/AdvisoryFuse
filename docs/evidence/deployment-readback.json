@@ -1,0 +1,17 @@
+{
+  "network": "studionet",
+  "contract": "0xA85b5871CeDb87cAe063d54A455DC6c9873D0b73",
+  "read_method": "get_config",
+  "result": {
+    "architecture": "VERSIONED_SNAPSHOT_SINGLE_USE_PERMIT",
+    "assessment_count": 0,
+    "deployer_authority": "NONE",
+    "permit_count": 0,
+    "permit_ttl_seconds": 600,
+    "proposal_count": 0,
+    "snapshot_count": 0,
+    "version": "ADVISORY_FUSE_V2"
+  },
+  "checked_at": "2026-10-08T08:33:41.088Z",
+  "scope": "Unauthenticated RPC readback; proves interface/configuration, not deployed-source identity or write-path E2E."
+}

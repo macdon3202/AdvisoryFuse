@@ -1,0 +1,9 @@
+.env
+frontend/.env
+frontend/node_modules/
+frontend/dist/
+artifacts/
+scripts/.state/
+__pycache__/
+.pytest_cache/
+*.pyc

@@ -1,0 +1,502 @@
+{
+  "network": "studionet",
+  "contract": "0xA85b5871CeDb87cAe063d54A455DC6c9873D0b73",
+  "started_at": "2026-10-08T08:33:52.090Z",
+  "actors": {
+    "target_owner": "0xFeD97e2aE1A8C1983b7cA206B3545e6A2c685E43",
+    "independent_reviewer": "0xc67532aeF9D2879cBA9375a02E6217A3524657B8"
+  },
+  "fixture": {
+    "package": "genlayer-js",
+    "version": "1.1.8",
+    "repo": "genlayerlabs/genlayer-js",
+    "commit": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+    "check": "drift"
+  },
+  "actions": {
+    "happy_propose": {
+      "who": "A",
+      "functionName": "propose_release",
+      "args": [
+        "sdk-release-live",
+        "1",
+        "genlayer-js",
+        "1.1.8",
+        "genlayerlabs",
+        "genlayer-js",
+        "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "package.json",
+        "drift",
+        "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed."
+      ],
+      "hash": "0xd8a79c22d210208061915fb7b25dd995f32dba2c2099b91233b5d8f5ee6ea977",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "post": null
+    },
+    "happy_pin_by_reviewer": {
+      "who": "B",
+      "functionName": "pin_sources",
+      "args": [
+        "1"
+      ],
+      "hash": "0x4ecbc6bda1bbe7a38b017a35c660fac356d61d924d7c4a497501edc6c9d69aef",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            52,
+            80,
+            73,
+            78,
+            78,
+            69,
+            68
+          ],
+          "readable": "\"PINNED\""
+        }
+      },
+      "post": {
+        "assessment_id": 0,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 1,
+        "state": "PINNED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    "happy_assess_retry_by_reviewer": {
+      "who": "B",
+      "functionName": "assess_release",
+      "args": [
+        "1"
+      ],
+      "hash": "0x1c68dddd9986e15b7b5dfd9f7581377efb2dc52cf155cfe3061f13118a32f662",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            60,
+            67,
+            76,
+            69,
+            65,
+            82,
+            69,
+            68
+          ],
+          "readable": "\"CLEARED\""
+        }
+      },
+      "post": {
+        "assessment_id": 1,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "ALL_GATES_CLEAR",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 1,
+        "state": "CLEARED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    "happy_issue_by_reviewer": {
+      "who": "B",
+      "functionName": "issue_permit",
+      "args": [
+        "1"
+      ],
+      "hash": "0xf61db2e25178ee2f687bfcf8be92b1e1b720ad85c40f19f53534a0f2d92ccd8e",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            9
+          ],
+          "readable": "1"
+        }
+      },
+      "post": {
+        "assessment_id": 1,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 1,
+        "reason": "ALL_GATES_CLEAR",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 1,
+        "state": "PERMITTED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    "happy_activate_by_owner": {
+      "who": "A",
+      "functionName": "activate_release",
+      "args": [
+        "1"
+      ],
+      "hash": "0x15ff24d1309468c7dfff0c6782f419ba8497862f064d2a149109930d5224b510",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            76,
+            65,
+            67,
+            84,
+            73,
+            86,
+            65,
+            84,
+            69,
+            68
+          ],
+          "readable": "\"ACTIVATED\""
+        }
+      },
+      "post": {
+        "proposal": {
+          "assessment_id": 1,
+          "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+          "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+          "id": 1,
+          "manifest_path": "package.json",
+          "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "package": "genlayer-js",
+          "permit_id": 1,
+          "reason": "ALL_GATES_CLEAR",
+          "repo": "genlayerlabs/genlayer-js",
+          "required_check": "drift",
+          "revision": 1,
+          "snapshot_id": 1,
+          "state": "ACTIVATED",
+          "target": "sdk-release-live",
+          "version": "1.1.8"
+        },
+        "permit": {
+          "consumed": true,
+          "consumer": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "expires_at": 1791449312,
+          "id": 1,
+          "proposal_id": 1,
+          "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+          "revision": 1,
+          "target": "sdk-release-live"
+        },
+        "target": {
+          "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+          "revision": 1,
+          "target": "sdk-release-live"
+        }
+      }
+    },
+    "adversarial_permit_replay": {
+      "who": "B",
+      "functionName": "activate_release",
+      "args": [
+        "1"
+      ],
+      "hash": "0x779091cccc7a309e809c305532d346ca3375cae87ea55177cc4df63b099636ae",
+      "phase": "VERIFIED",
+      "pre": {
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+        "revision": 1,
+        "target": "sdk-release-live"
+      },
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "ERROR",
+        "payload": "PERMIT_INACTIVE"
+      },
+      "post": {
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+        "revision": 1,
+        "target": "sdk-release-live"
+      }
+    },
+    "failure_propose_missing_check": {
+      "who": "A",
+      "functionName": "propose_release",
+      "args": [
+        "sdk-release-negative",
+        "1",
+        "genlayer-js",
+        "1.1.8",
+        "genlayerlabs",
+        "genlayer-js",
+        "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "package.json",
+        "definitely-not-a-real-check",
+        "The exact release must have the named CI check and all objective sources must align."
+      ],
+      "hash": "0xb47591cfa2a6e1d4066025421164eca4b17205ecf5f4253c9254017bb64333d8",
+      "phase": "VERIFIED",
+      "pre": null,
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "SUCCESS",
+        "payload": {
+          "raw": [
+            17
+          ],
+          "readable": "2"
+        }
+      },
+      "post": null
+    },
+    "failure_pin_missing_check": {
+      "who": "B",
+      "functionName": "pin_sources",
+      "args": [
+        "2"
+      ],
+      "hash": "0x5f74b3d7ad4b7eb16041f65c1f83a9ea2836663c69cb3109dae40c0306392a00",
+      "phase": "VERIFIED",
+      "pre": {
+        "assessment_id": 0,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact release must have the named CI check and all objective sources must align.",
+        "id": 2,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "definitely-not-a-real-check",
+        "revision": 1,
+        "snapshot_id": 0,
+        "state": "PROPOSED",
+        "target": "sdk-release-negative",
+        "version": "1.1.8"
+      },
+      "receipt": {
+        "status": "FINALIZED",
+        "consensus": "MAJORITY_AGREE",
+        "execution": "ERROR",
+        "payload": "SOURCE_GATES_FAILED"
+      },
+      "post": {
+        "assessment_id": 0,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact release must have the named CI check and all objective sources must align.",
+        "id": 2,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "definitely-not-a-real-check",
+        "revision": 1,
+        "snapshot_id": 0,
+        "state": "PROPOSED",
+        "target": "sdk-release-negative",
+        "version": "1.1.8"
+      }
+    }
+  },
+  "assertions": [
+    {
+      "label": "deployment identity and no deployer authority",
+      "passed": true,
+      "details": {
+        "architecture": "VERSIONED_SNAPSHOT_SINGLE_USE_PERMIT",
+        "assessment_count": 0,
+        "deployer_authority": "NONE",
+        "permit_count": 0,
+        "permit_ttl_seconds": 600,
+        "proposal_count": 0,
+        "snapshot_count": 0,
+        "version": "ADVISORY_FUSE_V2"
+      }
+    },
+    {
+      "label": "proposal is owner-authored",
+      "passed": true,
+      "details": {
+        "assessment_id": 0,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 0,
+        "state": "PROPOSED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    {
+      "label": "independent reviewer pins exact sources",
+      "passed": true,
+      "details": {
+        "assessment_id": 0,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 1,
+        "state": "PINNED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    {
+      "label": "consensus clears aligned release",
+      "passed": true,
+      "details": {
+        "assessment_id": 1,
+        "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+        "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+        "id": 1,
+        "manifest_path": "package.json",
+        "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+        "package": "genlayer-js",
+        "permit_id": 0,
+        "reason": "ALL_GATES_CLEAR",
+        "repo": "genlayerlabs/genlayer-js",
+        "required_check": "drift",
+        "revision": 1,
+        "snapshot_id": 1,
+        "state": "CLEARED",
+        "target": "sdk-release-live",
+        "version": "1.1.8"
+      }
+    },
+    {
+      "label": "activation consumes exact permit",
+      "passed": true,
+      "details": {
+        "proposal": {
+          "assessment_id": 1,
+          "commit_sha": "4303db00c428d57c6d8e5b04a75043ea42d4b0e7",
+          "criteria": "The exact npm release, immutable commit manifest, successful exact-SHA smoke test, and zero applicable OSV advisories must all align; unknowns must fail closed.",
+          "id": 1,
+          "manifest_path": "package.json",
+          "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "package": "genlayer-js",
+          "permit_id": 1,
+          "reason": "ALL_GATES_CLEAR",
+          "repo": "genlayerlabs/genlayer-js",
+          "required_check": "drift",
+          "revision": 1,
+          "snapshot_id": 1,
+          "state": "ACTIVATED",
+          "target": "sdk-release-live",
+          "version": "1.1.8"
+        },
+        "permit": {
+          "consumed": true,
+          "consumer": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "expires_at": 1791449312,
+          "id": 1,
+          "proposal_id": 1,
+          "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+          "revision": 1,
+          "target": "sdk-release-live"
+        },
+        "target": {
+          "owner": "0xfed97e2ae1a8c1983b7ca206b3545e6a2c685e43",
+          "release_digest": "d8f8e4528def10f9335725d7209279df7f081e2e98e14cf0086a5454a3b08d84",
+          "revision": 1,
+          "target": "sdk-release-live"
+        }
+      }
+    },
+    {
+      "label": "replay rollback equality",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "label": "objective failure rollback equality",
+      "passed": true,
+      "details": {}
+    }
+  ],
+  "readbacks": {
+    "final_config": {
+      "architecture": "VERSIONED_SNAPSHOT_SINGLE_USE_PERMIT",
+      "assessment_count": 1,
+      "deployer_authority": "NONE",
+      "permit_count": 1,
+      "permit_ttl_seconds": 600,
+      "proposal_count": 2,
+      "snapshot_count": 1,
+      "version": "ADVISORY_FUSE_V2"
+    }
+  },
+  "happy_proposal_id": 1,
+  "happy_permit_id": 1,
+  "failure_proposal_id": 2,
+  "completed_at": "2026-10-08T08:41:59.370Z"
+}
