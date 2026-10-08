@@ -4,6 +4,8 @@ AdvisoryFuse is a GenLayer release-activation firewall. It binds an npm version 
 
 Final StudioNet V2 contract: `0xA85b5871CeDb87cAe063d54A455DC6c9873D0b73`.
 
+Live application: https://advisoryfuse.macdonnellhodgkinson3202.workers.dev
+
 This is not an escrow, voting clone or administrator oracle. Its architecture is **Proposal → immutable source Snapshot → semantic Assessment → single-use Permit → Activation**. The deployer has no stored authority.
 
 ## Roles
