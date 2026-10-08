@@ -14,4 +14,4 @@
 
 Final contract: `0xA85b5871CeDb87cAe063d54A455DC6c9873D0b73` on StudioNet.
 
-Production frontend: `https://advisoryfuse.macdonnellhodgkinson3202.workers.dev` (Cloudflare Pages on the Workers platform, version `29a3b2e5-557a-4a91-bce8-d8cc42c781ee`).
+Production frontend: `https://advisoryfuse.pages.dev` (Cloudflare Pages; production alias verified HTTP 200).
