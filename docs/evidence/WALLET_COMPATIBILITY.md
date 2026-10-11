@@ -29,6 +29,19 @@ The connect button disables during work and clears any stale session on retry.
 
 ## Manual external-wallet check
 
+## Publication
+
+- Fix source commit: 162b618, pushed to origin/main.
+- Cloudflare Pages deployment succeeded:
+  https://748241a7.advisoryfuse.pages.dev
+- Production https://advisoryfuse.pages.dev returned HTTP 200; retrieved
+  /assets/index-CgGIqRyl.js contains the exact active contract address, the new
+  account-change guard and the no-Snaps connection notice.
+- First deploy attempt failed on an ignored stale .wrangler/deploy/config.json
+  pointing to absent dist/wrangler.json. The cache file was retained under
+  config.pre-wallet-fix.json, then deployment succeeded. No secret was committed.
+- This verifies publication/bundle parity, not real wallet interaction.
+
 Open https://advisoryfuse.pages.dev, connect your wallet, approve StudioNet switch
 if needed, and confirm the connected account. Rejecting a prompt must show an error
 without establishing a session. Use your own account for a fresh proposal/write;
