@@ -1,5 +1,6 @@
 import { createClient } from 'genlayer-js';
 import { studionet } from 'genlayer-js/chains';
+import { connectInjected } from './wallet.js';
 import { CONTRACT_VERSION, normalizeHash, receiptState, sameAddress, sameChainId } from './transactions.js';
 export const CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || '';
 export const EXPLORER = 'https://explorer-studio.genlayer.com';
@@ -10,14 +11,7 @@ export async function readContract(functionName, args = []) {
   return reader().readContract({ address: CONTRACT_ADDRESS, functionName, args });
 }
 export async function connectWallet() {
-  const injected = window.ethereum;
-  if (!injected) throw new Error('Install a browser wallet such as MetaMask.');
-  const provider = injected.providers?.find((x) => x.isMetaMask) || injected.providers?.[0] || injected;
-  const accounts = await provider.request({ method: 'eth_requestAccounts' });
-  if (!accounts?.[0]) throw new Error('Wallet returned no account.');
-  const client = createClient({ chain: studionet, account: accounts[0], provider });
-  if (typeof client.connect === 'function') await client.connect('studionet');
-  return { account: accounts[0], client, provider };
+  return connectInjected(window.ethereum, studionet, createClient);
 }
 export async function writeContract(wallet, functionName, args = []) {
   const accounts = await wallet.provider.request({ method: 'eth_accounts' });

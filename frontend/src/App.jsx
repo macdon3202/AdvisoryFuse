@@ -57,7 +57,7 @@ export default function App() {
     <header className="topbar">
       <div className="brand"><img src="/advisoryfuse-logo.png"/><div><b>ADVISORY/FUSE</b><span>Release activation firewall</span></div></div>
       <div className="network"><i/> StudioNet</div>
-      <button className="wallet" onClick={async () => { try { setWallet(await connectWallet()); } catch (e) { setNotice({ type:'error', text:e.message }); } }}>{wallet ? short(wallet.account) : 'Connect wallet'}</button>
+      <button className="wallet" disabled={Boolean(busy)} onClick={async () => { setBusy('Connecting wallet'); setWallet(null); try { setWallet(await connectWallet()); setNotice({ type:'ok', text:'Wallet connected on StudioNet. No Snaps required.' }); } catch (e) { setNotice({ type:'error', text:e.message }); } finally { setBusy(''); } }}>{wallet ? short(wallet.account) : 'Connect wallet'}</button>
     </header>
 
     <section className="hero">
